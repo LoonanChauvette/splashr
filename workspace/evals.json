@@ -1,0 +1,64 @@
+{
+  "skill_name": "r-usethis",
+  "evals": [
+    {
+      "id": 1,
+      "name": "new-package-bootstrap",
+      "prompt": "I want to create a new R package called 'datacleanr' for cleaning messy datasets. Walk me through the usethis workflow to create the package, set up Git, add an MIT license, create my first R file for a function called clean_names(), and set up testthat. Give me the exact usethis function calls in order.",
+      "files": [],
+      "assertions": [
+        {"type": "code_pattern", "description": "Uses create_package()", "check": "contains 'create_package('"},
+        {"type": "code_pattern", "description": "Uses use_git()", "check": "contains 'use_git('"},
+        {"type": "code_pattern", "description": "Uses use_mit_license()", "check": "contains 'use_mit_license('"},
+        {"type": "code_pattern", "description": "Uses use_r()", "check": "contains 'use_r('"},
+        {"type": "code_pattern", "description": "Uses use_testthat()", "check": "contains 'use_testthat('"},
+        {"type": "code_pattern", "description": "Uses use_test()", "check": "contains 'use_test('"},
+        {"type": "qualitative", "description": "Calls are in correct order (create -> git -> license -> R file -> testthat -> test)"}
+      ]
+    },
+    {
+      "id": 2,
+      "name": "add-dependency-and-docs",
+      "prompt": "I have an R package that needs to use dplyr for data manipulation and stringr for string operations. I also want to set up a README.Rmd, add pkgdown for a website, and create a vignette called 'intro'. What usethis functions should I call? Also show me how to properly reference dplyr functions in my R code.",
+      "files": [],
+      "assertions": [
+        {"type": "code_pattern", "description": "Uses use_package() for dplyr", "check": "contains 'use_package(\"dplyr\")' or contains \"use_package('dplyr')\""},
+        {"type": "code_pattern", "description": "Uses use_package() for stringr", "check": "contains 'use_package(\"stringr\")' or contains \"use_package('stringr')\""},
+        {"type": "code_pattern", "description": "Uses use_readme_rmd()", "check": "contains 'use_readme_rmd('"},
+        {"type": "code_pattern", "description": "Uses use_pkgdown()", "check": "contains 'use_pkgdown('"},
+        {"type": "code_pattern", "description": "Uses use_vignette()", "check": "contains 'use_vignette('"},
+        {"type": "code_pattern", "description": "Shows dplyr::fun() usage pattern", "check": "contains 'dplyr::'"},
+        {"type": "qualitative", "description": "Idiomatic usethis usage"}
+      ]
+    },
+    {
+      "id": 3,
+      "name": "github-ci-release",
+      "prompt": "My R package is ready for its first CRAN submission. I need to: set up GitHub Actions for R CMD check, add CRAN submission comments, create a release issue checklist, add a lifecycle badge, and prepare a NEWS.md file. Show me the usethis calls. Also, how do I check my Git/GitHub setup is correct?",
+      "files": [],
+      "assertions": [
+        {"type": "code_pattern", "description": "Uses use_github_action() for R CMD check", "check": "contains 'use_github_action('"},
+        {"type": "code_pattern", "description": "Uses use_cran_comments()", "check": "contains 'use_cran_comments('"},
+        {"type": "code_pattern", "description": "Uses use_release_issue()", "check": "contains 'use_release_issue('"},
+        {"type": "code_pattern", "description": "Uses use_lifecycle() or use_lifecycle_badge()", "check": "contains 'use_lifecycle'"},
+        {"type": "code_pattern", "description": "Uses use_news_md()", "check": "contains 'use_news_md('"},
+        {"type": "code_pattern", "description": "Uses git_sitrep() for checking setup", "check": "contains 'git_sitrep('"},
+        {"type": "qualitative", "description": "Correct function choices for CRAN release prep"}
+      ]
+    },
+    {
+      "id": 4,
+      "name": "pr-workflow-contributor",
+      "prompt": "I want to contribute to the r-lib/gargle package on GitHub. I need to fork it, clone it locally, create a branch called 'fix-token-refresh', make my changes, and submit a pull request. Show me the complete usethis pr_* workflow from start to finish.",
+      "files": [],
+      "assertions": [
+        {"type": "code_pattern", "description": "Uses create_from_github()", "check": "contains 'create_from_github('"},
+        {"type": "code_pattern", "description": "Uses pr_init()", "check": "contains 'pr_init('"},
+        {"type": "code_pattern", "description": "Uses pr_push()", "check": "contains 'pr_push('"},
+        {"type": "code_pattern", "description": "Uses pr_finish()", "check": "contains 'pr_finish('"},
+        {"type": "code_pattern", "description": "Branch name matches fix-token-refresh", "check": "contains 'fix-token-refresh'"},
+        {"type": "qualitative", "description": "Correct PR workflow order (fork/clone -> init -> work -> push -> finish)"}
+      ]
+    }
+  ]
+}

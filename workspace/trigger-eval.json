@@ -1,0 +1,22 @@
+[
+  {"query": "I need to create a new R package for my research project, set up Git and testing", "should_trigger": true},
+  {"query": "library(usethis) -- how do I add a GitHub Actions workflow to my package?", "should_trigger": true},
+  {"query": "My DESCRIPTION file needs a license, how do I use use_mit_license()?", "should_trigger": true},
+  {"query": "I want to contribute to r-lib/cli, show me the pr_init and pr_push workflow", "should_trigger": true},
+  {"query": "usethis::create_package() isn't working, it says the path already exists", "should_trigger": true},
+  {"query": "How do I set up pkgdown for my R package website with use_pkgdown_github_pages()?", "should_trigger": true},
+  {"query": "I'm following the R Packages book whole game chapter, what usethis functions do I need?", "should_trigger": true},
+  {"query": "I need to add testthat to my package and write my first test with use_test()", "should_trigger": true},
+  {"query": "How do I fork and clone a GitHub repo using create_from_github()?", "should_trigger": true},
+  {"query": "I want to prepare my package for CRAN submission with use_cran_comments() and use_release_issue()", "should_trigger": true},
+  {"query": "I need to create a Shiny app with a sidebar layout and plot output", "should_trigger": false},
+  {"query": "How do I use dplyr::mutate() to create new columns in a dataframe?", "should_trigger": false},
+  {"query": "My ggplot2 chart has overlapping axis labels, how do I fix that?", "should_trigger": false},
+  {"query": "I want to install packages from CRAN using install.packages()", "should_trigger": false},
+  {"query": "How do I set up renv for project dependency management in R?", "should_trigger": false},
+  {"query": "I need to write a unit test for my R function using testthat::expect_equal()", "should_trigger": false},
+  {"query": "How do I create an R Markdown document with code chunks and tables?", "should_trigger": false},
+  {"query": "I want to use targets package to build a pipeline for my data analysis", "should_trigger": false},
+  {"query": "My R session keeps crashing when I load large CSV files, any tips?", "should_trigger": false},
+  {"query": "How do I configure my .Rprofile to load devtools automatically on startup?", "should_trigger": false}
+]

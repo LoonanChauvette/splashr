@@ -1,0 +1,5 @@
+devtools::load_all(".", quiet = TRUE)
+cat("900:", splash("900"), " | 090:", splash("090"), " | 009:", splash("009"), "\n")
+cat("green default:", splash("green"), " | green cellpond:", splash("green", theme = "cellpond"), "\n")
+cat("9_9 (len ", length(splash("9_9")), "): ", paste(splash("9_9"), collapse = " "), "\n", sep = "")
+cat("mix:", paste(splash(c("green", "9_9", 900)), collapse = " "), "\n")

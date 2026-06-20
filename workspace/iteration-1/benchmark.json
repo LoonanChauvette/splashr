@@ -1,0 +1,31 @@
+{
+  "iteration": 1,
+  "with_skill": {
+    "pass_rate": 1.0,
+    "total_assertions": 27,
+    "passed": 27
+  },
+  "without_skill": {
+    "pass_rate": 1.0,
+    "total_assertions": 27,
+    "passed": 27
+  },
+  "per_eval": {
+    "eval-new-package-bootstrap": {
+      "with_skill_pass_rate": 1.0,
+      "without_skill_pass_rate": 1.0
+    },
+    "eval-add-dependency-and-docs": {
+      "with_skill_pass_rate": 1.0,
+      "without_skill_pass_rate": 1.0
+    },
+    "eval-github-ci-release": {
+      "with_skill_pass_rate": 1.0,
+      "without_skill_pass_rate": 1.0
+    },
+    "eval-pr-workflow-contributor": {
+      "with_skill_pass_rate": 1.0,
+      "without_skill_pass_rate": 1.0
+    }
+  }
+}

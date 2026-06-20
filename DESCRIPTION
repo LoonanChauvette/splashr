@@ -1,13 +1,14 @@
 Package: splashr
 Title: Splash Color System in R for Easy Theming
-Version: 0.0.0.9000
+Version: 0.1.0
 Authors@R: 
-    person("Loonan", "Chauvette", , "loonan.chauvette@gmail.com", role = c("aut", "cre"),  comment = "https://orcid.org/0000-0003-0950-761X")
+    person("Loonan", "Chauvette", , "loonan.chauvette@gmail.com", role = c("aut", "cre"),  comment = c(ORCID = "https://orcid.org/0000-0003-0950-761X"))
 Description: Implementation of Todepond's Splash color system in R. For more information see: https://www.todepond.com/lab/splash/ .
 License: MIT + file LICENSE
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.3.3
 Suggests: 
-    testthat (>= 3.0.0)
+    testthat (>= 3.0.0),
+    withr
 Config/testthat/edition: 3

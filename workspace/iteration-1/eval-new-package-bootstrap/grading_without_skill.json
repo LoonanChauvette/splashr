@@ -1,0 +1,19 @@
+{
+  "eval_id": "eval-new-package-bootstrap",
+  "eval_name": "Bootstrap a new R package with usethis",
+  "expectations": [
+    {"text": "Uses create_package()", "passed": true, "evidence": "Line 9: create_package(\"datacleanr\"); also in summary line 95"},
+    {"text": "Uses use_git()", "passed": true, "evidence": "Line 17: use_git(); also in summary line 98"},
+    {"text": "Uses use_mit_license()", "passed": true, "evidence": "Line 25: use_mit_license(copyright_holder = \"Your Name\"); also in summary line 101"},
+    {"text": "Uses use_r()", "passed": true, "evidence": "Line 33: use_r(\"clean_names\"); also in summary line 104"},
+    {"text": "Uses use_testthat()", "passed": true, "evidence": "Line 54: use_testthat(); also in summary line 107"},
+    {"text": "Uses use_test()", "passed": true, "evidence": "Line 66: use_test(\"clean_names\"); also in summary line 110"},
+    {"text": "Calls are in correct order (create -> git -> license -> R file -> testthat -> test)", "passed": true, "evidence": "Summary lines 95-111 show exact order: create_package -> use_git -> use_mit_license -> use_r -> use_testthat -> use_test"}
+  ],
+  "summary": {
+    "passed": 7,
+    "failed": 0,
+    "total": 7,
+    "pass_rate": 1.0
+  }
+}

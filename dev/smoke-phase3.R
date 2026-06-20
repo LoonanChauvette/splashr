@@ -1,0 +1,12 @@
+devtools::load_all(".", quiet = TRUE)
+cat("as_splash('#ff0000')      ->", as_splash("#ff0000"), "\n")
+cat("as_splash('00ff00')       ->", as_splash("00ff00"), "\n")
+cat("as_splash(c(...))         ->", paste(as_splash(c("#ff0000","#00ff00","#0000ff")), collapse=" "), "\n")
+cat("shorthand #f00            ->", as_splash("#f00"), "\n")
+cat("cellpond #171d28          ->", as_splash("#171d28", theme="cellpond"), "\n")
+# The marquee: round-trip all 1000 codes.
+codes <- sprintf("%03d", 0:999)
+rt <- as_splash(splash(codes), theme = "default")
+cat("round-trip all 1000 (default):", identical(rt, codes), "\n")
+rt2 <- as_splash(splash(codes, theme = "cellpond"), theme = "cellpond")
+cat("round-trip all 1000 (cellpond):", identical(rt2, codes), "\n")

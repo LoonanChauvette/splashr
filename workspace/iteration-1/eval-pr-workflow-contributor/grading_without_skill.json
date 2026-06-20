@@ -1,0 +1,18 @@
+{
+  "eval_id": "eval-pr-workflow-contributor",
+  "eval_name": "PR workflow for contributing to r-lib/gargle with usethis",
+  "expectations": [
+    {"text": "Uses create_from_github()", "passed": true, "evidence": "Line 45: usethis::create_from_github(repo_spec = \"r-lib/gargle\", fork = TRUE); also line 388"},
+    {"text": "Uses pr_init()", "passed": true, "evidence": "Line 417: usethis::pr_init(\"fix-token-refresh\"); also line 395"},
+    {"text": "Uses pr_push()", "passed": true, "evidence": "Line 229: usethis::pr_push(); also line 405"},
+    {"text": "Uses pr_finish()", "passed": true, "evidence": "Line 343: usethis::pr_finish(); also line 414"},
+    {"text": "Branch name matches fix-token-refresh", "passed": true, "evidence": "Line 417: pr_init(\"fix-token-refresh\"); also line 395"},
+    {"text": "Correct PR workflow order (fork/clone -> init -> work -> push -> finish)", "passed": true, "evidence": "Quick reference lines 388-414: create_from_github -> pr_pull_upstream -> pr_init -> work -> pr_commit -> pr_push -> pr_open -> ... -> pr_finish. Required subsequence present in order."}
+  ],
+  "summary": {
+    "passed": 6,
+    "failed": 0,
+    "total": 6,
+    "pass_rate": 1.0
+  }
+}

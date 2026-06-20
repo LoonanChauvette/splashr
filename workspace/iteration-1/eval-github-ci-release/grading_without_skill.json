@@ -1,0 +1,19 @@
+{
+  "eval_id": "eval-github-ci-release",
+  "eval_name": "GitHub CI and CRAN release preparation with usethis",
+  "expectations": [
+    {"text": "Uses use_github_action() for R CMD check", "passed": true, "evidence": "Line 10: usethis::use_github_action(\"check-standard\")"},
+    {"text": "Uses use_cran_comments()", "passed": true, "evidence": "Line 46: usethis::use_cran_comments()"},
+    {"text": "Uses use_release_issue()", "passed": true, "evidence": "Line 79: usethis::use_release_issue()"},
+    {"text": "Uses use_lifecycle() or use_lifecycle_badge()", "passed": true, "evidence": "Line 17: usethis::use_lifecycle_badge(\"stable\"); Line 33: usethis::use_lifecycle()"},
+    {"text": "Uses use_news_md()", "passed": true, "evidence": "Line 142: usethis::use_news_md()"},
+    {"text": "Uses git_sitrep() for checking setup", "passed": true, "evidence": "Line 212: usethis::git_sitrep()"},
+    {"text": "Correct function choices for CRAN release prep", "passed": true, "evidence": "All functions correct for CRAN prep: use_github_action, use_cran_comments, use_release_issue, use_lifecycle_badge, use_news_md, git_sitrep. Also includes rhub/win-builder checks."}
+  ],
+  "summary": {
+    "passed": 7,
+    "failed": 0,
+    "total": 7,
+    "pass_rate": 1.0
+  }
+}
