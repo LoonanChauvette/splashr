@@ -2,4 +2,5 @@
 ^README\.Rmd$
 ^README\.html$
 ^dev$
+^examples$
 ^workspace$

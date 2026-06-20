@@ -70,12 +70,12 @@ Each phase: implement → write tests → run `devtools::test()` → document wi
 - [x] `R/splash_show.R`: base-R swatch via `graphics::image()` (or `rect()`), works for a single color, a palette, and a wildcard ramp. No ggplot2.
 - [x] Tests: runs without error; snapshot the printed/swatch output if feasible.
 
-### Phase 6 — Docs & polish
-- [ ] Full roxygen2 docs for all exported functions with `@examples`.
-- [ ] `devtools::document()`; regenerate `NAMESPACE` and `man/`.
-- [ ] Rewrite `README.Rmd` with a real worked example (splash codes, names, a palette, a swatch) and re-render.
-- [ ] `devtools::check()` → 0 errors/warnings/notes.
-- [ ] Tag v0.1.0.
+### Phase 6 — Docs & polish  ✅
+- [x] Full roxygen2 docs for all exported functions with `@examples`.
+- [x] `devtools::document()`; regenerate `NAMESPACE` and `man/`.
+- [x] Rewrite `README.Rmd` with a real worked example (splash codes, names, a palette, a swatch) and re-render.
+- [x] `devtools::check()` → 0 errors/warnings/notes.
+- [x] Tag v0.1.0.
 
 ---
 
